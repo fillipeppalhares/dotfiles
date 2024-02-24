@@ -77,11 +77,11 @@ let g:rails_projections = {
     \ },
     \ "app/controllers/concerns/*.rb": {
     \   "command": "concon",
-    \   "template": "# frozen_string_literal: true\n\nmodule {camelcase|capitalize|colons}\nend",
+    \   "template": "# frozen_string_literal: true\n\nmodule {camelcase|capitalize|colons}\n  extend ActiveSupport::Concern\nend",
     \ },
     \ "app/models/concerns/*.rb": {
     \   "command": "modcon",
-    \   "template": "# frozen_string_literal: true\n\nmodule {camelcase|capitalize|colons}\nend",
+    \   "template": "# frozen_string_literal: true\n\nmodule {camelcase|capitalize|colons}\n  extend ActiveSupport::Concern\nend",
     \ },
     \ "config/initializers/*.rb": {
     \   "command": "initializer"
